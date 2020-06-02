@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import JogosRapido from '~/assets/jogosrapido.png';
 
 import { Container, FormCenter } from './styles';
@@ -16,7 +17,9 @@ function SignIn() {
           <input placeholder="Nome" />
           <input placeholder="Senha" />
           <div className="divbutton">
-            <ButtonComponent text="Entrar" size={30} />
+            <Link to="/dashboard">
+              <ButtonComponent text="Entrar" size={30} />
+            </Link>
           </div>
         </div>
       </FormCenter>
