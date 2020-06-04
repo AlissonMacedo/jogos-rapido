@@ -1,34 +1,30 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { darken, lighten } from 'polished';
 
-export const Button = styled.button`
-  height: 36px;
-  width: 112px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  border: solid 1px #000;
-  border-radius: 4px;
+export const Container = styled.button`
+  cursor: pointer;
+  font-weight: 700;
+  transition: 180ms ease-in-out;
 
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row-reverse;
   align-items: center;
-  transition: background 0.2s;
+  justify-content: center;
+  min-width: 2.2rem;
+  min-height: 2.2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 1.6rem;
 
-  background: #7159c1;
+  background-color: ${(p) => lighten(0.025, p.color)};
+  border-color: ${(p) => p.borderColor};
 
-  &:hover {
-    background: ${lighten(0.03, '#7159c1')};
+  span {
+    margin-left: ${(p) => (p.icon ? '15px' : '0')};
   }
-
-  svg {
-    margin-right: 8px;
-    margin-left: 10px;
-  }
-
-  .divname {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  :hover {
+    background-color: ${(p) => darken(0.1, p.color)};
+    text-decoration: none;
   }
 `;

@@ -1,12 +1,18 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import JogosRapido from '~/assets/jogosrapido.png';
 
 import { Container, FormCenter } from './styles';
-import ButtonComponent from '~/components/Button';
+import Button from '~/components/Button';
 
 function SignIn() {
+  const history = useHistory();
+
+  function handleClick() {
+    history.push('/dashboard');
+  }
+
   return (
     <Container>
       <FormCenter>
@@ -17,9 +23,9 @@ function SignIn() {
           <input placeholder="Nome" />
           <input placeholder="Senha" />
           <div className="divbutton">
-            <Link to="/dashboard">
-              <ButtonComponent text="Entrar" size={30} />
-            </Link>
+            <Button color="#7159c1" icon="FaGamepad" onClick={handleClick}>
+              Entrar
+            </Button>
           </div>
         </div>
       </FormCenter>

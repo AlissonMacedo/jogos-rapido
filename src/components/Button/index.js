@@ -1,21 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { MdArrowForward } from 'react-icons/md';
-import { Button } from './styles';
+import * as FontAwesome from 'react-icons/fa';
+import { Container } from './styles';
 
-function ButtonComponent({ text, size }) {
+function ButtonComponent({
+  type,
+  color,
+  icon,
+  iconSize,
+  children,
+  onClick,
+  borderColor,
+  ...rest
+}) {
+  const Icon = FontAwesome[icon];
+
   return (
-    <Button>
-      <MdArrowForward color="#FFF" size={size} />
-      <di className="divname">{text}</di>
-    </Button>
+    <Container
+      type={type}
+      color={color}
+      onClick={onClick}
+      {...rest}
+      icon={icon}
+      borderColor={borderColor}
+    >
+      {children && <span>{children}</span>}
+      {icon && <Icon size={iconSize} />}
+    </Container>
   );
 }
 
 ButtonComponent.propTypes = {
-  text: PropTypes.isRequired,
-  size: PropTypes.isRequired,
+  type: PropTypes.string,
+  color: PropTypes.string,
+  icon: PropTypes.string,
+  iconSize: PropTypes.number,
+  children: PropTypes.string,
+  onClick: PropTypes.func,
+  borderColor: PropTypes.string,
+};
+
+ButtonComponent.defaultProps = {
+  type: 'buttom',
+  color: '#ddd',
+  icon: '',
+  iconSize: 18,
+  children: '',
+  onClick: () => {},
+  borderColor: '#ddd',
 };
 
 export default ButtonComponent;

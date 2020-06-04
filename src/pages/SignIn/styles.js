@@ -45,7 +45,6 @@ export const FormCenter = styled.div`
     span {
       font-size: 14px;
       font-weight: bold;
-      margin-bottom: 8px;
     }
 
     input {
@@ -70,9 +69,8 @@ export const FormCenter = styled.div`
       align-items: center;
 
       button {
-        width: 200px;
-        height: 50px;
         font-size: 24px;
+        color: #fff;
       }
     }
   }

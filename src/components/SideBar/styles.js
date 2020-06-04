@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 export const Container = styled.div`
-  width: 200px;
+  width: 270px;
   height: 100%;
   background-color: #2c333f;
 
