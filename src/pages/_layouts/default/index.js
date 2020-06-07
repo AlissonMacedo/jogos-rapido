@@ -8,11 +8,13 @@ import SideBar from '~/components/SideBar';
 
 export default function DefaultLayout({ children }) {
   return (
-    <Wrapper>
+    <>
       <SideBar />
-      {/* <Header /> */}
-      {children}
-    </Wrapper>
+      <Wrapper>
+        {/* <Header /> */}
+        {children}
+      </Wrapper>
+    </>
   );
 }
 

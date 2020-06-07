@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 270px;
   height: 100%;
   background-color: #2c333f;
+  position: fixed;
 
   .divheader {
     display: flex;

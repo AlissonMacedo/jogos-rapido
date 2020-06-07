@@ -6,22 +6,22 @@ import { Container, ProjectTable } from './styles';
 
 const projects = [
   {
-    title: 'DEv',
-    description: 'teste',
-    name: 'Alisson',
-    tag: 'Dev',
+    title: 'GOW',
+    description: 'Edição de game do ano',
+    name: 'GOD OF WAR',
+    tag: 'Ação',
   },
   {
-    title: 'DEv',
-    description: 'teste',
-    name: 'Alisson',
-    tag: 'Dev',
+    title: 'FIFA 2020',
+    description: 'jogo de futebol',
+    name: 'Fifa 2020',
+    tag: 'Futibol',
   },
   {
-    title: 'DEv',
-    description: 'teste',
-    name: 'Alisson',
-    tag: 'Dev',
+    title: 'COD',
+    description: 'jogo de FPS',
+    name: 'Call of duty',
+    tag: 'FPS',
   },
 ];
 
