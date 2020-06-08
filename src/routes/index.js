@@ -9,6 +9,8 @@ import Dashboard from '~/pages/Dashboard';
 import Product from '~/pages/Product';
 import RegisterProduct from '~/pages/Product/RegisterProduct';
 
+import Request from '~/pages/Requests';
+
 export default function Routes() {
   return (
     <Switch>
@@ -17,6 +19,8 @@ export default function Routes() {
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/produto" component={Product} />
       <Route path="/registrar-produto" component={RegisterProduct} />
+
+      <Route path="/pedidos" component={Request} />
     </Switch>
   );
 }

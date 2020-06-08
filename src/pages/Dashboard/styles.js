@@ -24,7 +24,7 @@ export const Container = styled.div`
         border-radius: 4px;
         margin: 20px;
         border-radius: 4px;
-        border: solid 0.5px #ccc;
+        border: solid 0px #ccc;
 
         header {
           display: flex;
@@ -47,7 +47,7 @@ export const Container = styled.div`
         border-radius: 4px;
         margin: 20px;
         border-radius: 4px;
-        border: solid 0.5px #ccc;
+        border: solid 0px #ccc;
 
         header {
           display: flex;

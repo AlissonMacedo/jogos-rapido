@@ -39,10 +39,12 @@ export default function SideBar() {
 
               <p>Clientes</p>
             </li>
-            <li>
-              <IoIosCreate size={20} color="#fff" />
-              <p>Pedidos</p>
-            </li>
+            <Link to="/pedidos">
+              <li>
+                <IoIosCreate size={20} color="#fff" />
+                <p>Pedidos</p>
+              </li>
+            </Link>
             <li>
               <IoIosCart size={20} color="#fff" />
               <p>Pre-vendas</p>
