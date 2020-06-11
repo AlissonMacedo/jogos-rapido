@@ -22,7 +22,9 @@ export default function RouteWrapper({
 
   const { path } = rest;
   let Layout;
-  if (path === '/') {
+  if (path === '/pedidos/imprimir') {
+    Layout = AuthLayout;
+  } else if (path === '/') {
     Layout = AuthLayout;
   } else {
     Layout = DefaultLayout;

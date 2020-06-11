@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import { Container, SalesTable } from './styles';
 import Button from '~/components/Button';
 
@@ -207,10 +208,22 @@ export default function Requests() {
                       onClick={() => {}}
                       className="buttonLeft"
                     />
-                    <Button icon="FaPrint" onClick={() => {}} />
-                    <Button icon="" onClick={() => {}} className="buttonRight">
-                      X
-                    </Button>
+
+                    <Link
+                      to="route"
+                      target="_blank"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        window.open('/pedidos/imprimir');
+                      }}
+                    >
+                      <Button icon="FaPrint" onClick={() => {}} />
+                    </Link>
+                    <Button
+                      icon="FaRegTrashAlt"
+                      onClick={() => {}}
+                      className="buttonRight"
+                    />
                   </div>
                 </td>
               </tr>

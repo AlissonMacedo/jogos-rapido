@@ -10,6 +10,7 @@ import Product from '~/pages/Product';
 import RegisterProduct from '~/pages/Product/RegisterProduct';
 
 import Request from '~/pages/Requests';
+import PrintResquest from '~/pages/Requests/printREquest';
 
 export default function Routes() {
   return (
@@ -20,7 +21,8 @@ export default function Routes() {
       <Route path="/produto" component={Product} />
       <Route path="/registrar-produto" component={RegisterProduct} />
 
-      <Route path="/pedidos" component={Request} />
+      <Route path="/pedidos" exact component={Request} />
+      <Route path="/pedidos/imprimir" component={PrintResquest} />
     </Switch>
   );
 }

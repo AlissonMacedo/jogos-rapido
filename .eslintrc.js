@@ -1,8 +1,8 @@
 module.exports = {
   env: {
-    es6: true,
-    jest: true,
     browser: true,
+    es6: true,
+    node: true,
   },
   extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
@@ -10,6 +10,7 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
     __DEV__: true,
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -29,11 +30,13 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
     camelcase: 'off',
-    '@typescript-eslint/camelcase': 'off',
     'no-console': ['error', { allow: ['tron'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-props-no-spreading': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'react/require-default-props': 'off',
+    'react/forbid-prop-types': 'off',
   },
   settings: {
     'import/resolver': {
