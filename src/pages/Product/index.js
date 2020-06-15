@@ -29,7 +29,7 @@ export default function Product() {
   const history = useHistory();
 
   function handleClick() {
-    history.push('/registrar-produto');
+    history.push('/novo-produto');
   }
   return (
     <>

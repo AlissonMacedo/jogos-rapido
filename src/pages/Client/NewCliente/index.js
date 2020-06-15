@@ -6,7 +6,7 @@ import ImageInput from '~/components/ImageInput';
 import DatePicker from '~/components/DatePicker';
 import { Container } from './styles';
 
-export default function RegisterProduct() {
+export default function NewCliente() {
   const options = [
     { id: 'React JS', title: 'React JS' },
     { id: 'React Native', title: 'React Native' },

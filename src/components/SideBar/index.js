@@ -28,17 +28,19 @@ export default function SideBar() {
         <section>
           <h4>MENU ADMIN</h4>
           <ul>
-            <Link to="/produto">
+            <Link to="/produtos">
               <li>
                 <IoLogoGameControllerA size={20} color="#fff" />
                 <p>Produtos</p>
               </li>
             </Link>
-            <li>
-              <IoIosPeople size={20} color="#fff" />
+            <Link to="/clientes">
+              <li>
+                <IoIosPeople size={20} color="#fff" />
 
-              <p>Clientes</p>
-            </li>
+                <p>Clientes</p>
+              </li>
+            </Link>
             <Link to="/pedidos">
               <li>
                 <IoIosCreate size={20} color="#fff" />

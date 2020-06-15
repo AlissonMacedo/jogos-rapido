@@ -7,10 +7,13 @@ import SignIn from '~/pages/SignIn';
 import Dashboard from '~/pages/Dashboard';
 
 import Product from '~/pages/Product';
-import RegisterProduct from '~/pages/Product/RegisterProduct';
+import NewProduct from '~/pages/Product/NewProduct';
 
 import Request from '~/pages/Requests';
 import PrintResquest from '~/pages/Requests/printREquest';
+
+import Client from '~/pages/Client';
+import NewClient from '~/pages/Client/NewCliente';
 
 export default function Routes() {
   return (
@@ -18,11 +21,14 @@ export default function Routes() {
       <Route path="/" exact component={SignIn} />
 
       <Route path="/dashboard" component={Dashboard} />
-      <Route path="/produto" component={Product} />
-      <Route path="/registrar-produto" component={RegisterProduct} />
+      <Route path="/produtos" component={Product} />
+      <Route path="/novo-produto" component={NewProduct} />
 
       <Route path="/pedidos" exact component={Request} />
       <Route path="/pedidos/imprimir" component={PrintResquest} />
+
+      <Route path="/clientes" exact component={Client} />
+      <Route path="/clientes/novo-cliente" component={NewClient} />
     </Switch>
   );
 }
