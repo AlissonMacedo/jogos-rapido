@@ -1,105 +1,142 @@
 import React from 'react';
+
 import { useHistory } from 'react-router-dom';
+import { Container, ProductTable } from './styles';
 import Button from '~/components/Button';
 
-import { Container, ProjectTable } from './styles';
-
-const projects = [
-  {
-    title: 'GOW',
-    description: 'Edição de game do ano',
-    name: 'GOD OF WAR',
-    tag: 'Ação',
-  },
-  {
-    title: 'FIFA 2020',
-    description: 'jogo de futebol',
-    name: 'Fifa 2020',
-    tag: 'Futibol',
-  },
-  {
-    title: 'COD',
-    description: 'jogo de FPS',
-    name: 'Call of duty',
-    tag: 'FPS',
-  },
-];
+import Select from '~/components/Select';
 
 export default function Product() {
   const history = useHistory();
 
   function handleClick() {
-    history.push('/novo-produto');
+    history.push('/produtos/novo-produto');
   }
+
+  const products = [
+    {
+      codigo: 123,
+      product: 'GOD OF WAR',
+      cust: 123,
+      sale: 170,
+      stor: 10,
+      console: 'XBOX',
+    },
+    {
+      codigo: 123,
+      product: 'GOD OF WAR',
+      cust: 123,
+      sale: 170,
+      stor: 10,
+      console: 'XBOX',
+    },
+    {
+      codigo: 123,
+      product: 'GOD OF WAR',
+      cust: 123,
+      sale: 170,
+      stor: 10,
+      console: 'XBOX',
+    },
+    {
+      codigo: 123,
+      product: 'GOD OF WAR',
+      cust: 123,
+      sale: 170,
+      stor: 10,
+      console: 'XBOX',
+    },
+    {
+      codigo: 123,
+      product: 'GOD OF WAR',
+      cust: 123,
+      sale: 170,
+      stor: 10,
+      console: 'XBOX',
+    },
+  ];
+
+  const value = [
+    {
+      value: 10,
+      label: 10,
+    },
+    {
+      value: 20,
+      label: 20,
+    },
+  ];
+
   return (
     <>
       <Container>
         <div className="header" />
-        <section className="titleOptions">
-          <div>
-            <h3>Lista de Produtos</h3>
-          </div>
-          <div className="divOptionsRight">
-            <Button icon="FaLaptopCode" onClick={handleClick}>
+
+        <div className="table">
+          <p>Produtos</p>
+          <div className="divRight">
+            <Button
+              icon="FaLaptopCode"
+              onClick={handleClick}
+              className="buttonNewClient"
+            >
               Novo Produto
             </Button>
-
-            <Button color="#eee" icon="FaListUl" onClick={() => {}}>
-              Lista de Preços
-            </Button>
-
-            <input placeholder="Pesquisar..." />
+            <input placeholder="pesquisar..." />
+            <div>
+              <Select
+                name="value"
+                placeholder="filtro"
+                options={value}
+                styles={{ width: '40px' }}
+                // defaultValue={
+                // }
+                onChange={() => {}}
+              />
+            </div>
           </div>
-        </section>
+        </div>
+        <ProductTable>
+          <thead>
+            <tr>
+              <th>CODIGO</th>
+              <th>PRODUTO</th>
+              <th>P. CUSTO</th>
+              <th>P. VENDA</th>
+              <th>P. ESTOQUE</th>
+              <th>CONSOLE</th>
+              <th>AÇÃO</th>
+            </tr>
+          </thead>
 
-        <section className="body">
-          <div>
-            <ProjectTable>
-              <thead>
-                <tr>
-                  <th>CODIGO</th>
-                  <th>PRODUTO</th>
-                  <th>P. CUSTO</th>
-                  <th>P. VENDA</th>
-                  <th>P. ESTOQUE</th>
-                  <th>CONSOLE</th>
-                  <th id="acoes">AÇÕES</th>
-                </tr>
-              </thead>
+          {products.map((project) => (
+            <tbody>
+              <tr key={project.codigo}>
+                <td id="codigo">{project.codigo}</td>
+                <td id="produto">{project.product}</td>
+                <td id="custo">{project.cust}</td>
+                <td id="venda">{project.sale}</td>
+                <td id="estoque">{project.stor}</td>
+                <td id="console">{project.console}</td>
+                <td id="acao">
+                  <div>
+                    <Button
+                      icon="FaExchangeAlt"
+                      onClick={() => {}}
+                      className="buttonLeft"
+                    />
 
-              {projects.map((project) => (
-                <tbody>
-                  <tr key={project.id}>
-                    <td id="codigo">{project.title}</td>
-                    <td id="title">{project.description}</td>
-                    <td id="custo">{project.description}</td>
-                    <td id="venda">{project.description}</td>
-                    <td id="estoque">{project.description}</td>
-                    <td id="cosnole">{project.description}</td>
-
-                    <td id="acaoBT">
-                      <button
-                        type="button"
-                        id="buttonEditar"
-                        onClick={() => {}}
-                      >
-                        editar
-                      </button>
-
-                      <button
-                        type="button"
-                        id="buttonApagar"
-                        onClick={() => {}}
-                      >
-                        apagar
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              ))}
-            </ProjectTable>
-          </div>
-        </section>
+                    <Button
+                      icon="FaRegTrashAlt"
+                      onClick={() => {}}
+                      className="buttonRight"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          ))}
+        </ProductTable>
       </Container>
     </>
   );

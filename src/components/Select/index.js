@@ -11,14 +11,16 @@ export default function SelectComponent({
   options,
   onChange,
   defaultValue,
+  widthT,
 }) {
+  const width = widthT || '200px';
   const customStyles = {
     control: () => ({
       display: 'flex',
       border: '1px solid #ccc',
       borderRadius: 4,
       height: 40,
-      width: '120px',
+      width,
       padding: '0 7px',
       color: '#999',
       marginLeft: '20px',
@@ -52,6 +54,7 @@ export default function SelectComponent({
 
 SelectComponent.propTypes = {
   name: PropTypes.string.isRequired,
+  widthT: PropTypes.number,
   options: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
   onChange: PropTypes.func.isRequired,
   defaultValue: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),

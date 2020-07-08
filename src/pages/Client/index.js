@@ -82,7 +82,7 @@ export default function Client() {
               onClick={handleClick}
               className="buttonNewClient"
             >
-              Novo Produto
+              Novo Cliente
             </Button>
             <input placeholder="pesquisar..." />
             <div>

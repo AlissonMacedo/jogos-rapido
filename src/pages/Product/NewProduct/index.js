@@ -125,7 +125,7 @@ export default function NewProduct() {
                   <button className="green" type="submit">
                     Salvar
                   </button>
-                  <Link to="/produto">
+                  <Link to="/produtos">
                     <button
                       className="red"
                       type="button"

@@ -1,28 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Input, Select, Form } from '@rocketseat/unform';
+import { Input, Form } from '@rocketseat/unform';
 import * as Yup from 'yup';
 import ImageInput from '~/components/ImageInput';
-import DatePicker from '~/components/DatePicker';
 import { Container } from './styles';
 
-export default function NewCliente() {
-  const options = [
-    { id: 'React JS', title: 'React JS' },
-    { id: 'React Native', title: 'React Native' },
-    { id: 'Node JS', title: 'Node JS' },
-  ];
-  const options2 = [
-    { id: 1, title: 'Sim' },
-    { id: 2, title: 'Não' },
-  ];
-
+export default function NewProduct() {
   const schema = Yup.object().shape({
     file_id: Yup.number().required(),
     title: Yup.string().required('Insira o título do meetup'),
     description: Yup.string().required('Descreva o seu meetup'),
-    date: Yup.date().required('Insira uma data'),
-    location: Yup.string().required('Insira o local'),
   });
 
   function handleSubmit() {}
@@ -32,7 +19,7 @@ export default function NewCliente() {
         <div className="header" />
         <section className="titleOptions">
           <div>
-            <h3>Cadastro de Produto</h3>
+            <h3>Cadastro de Cliente</h3>
           </div>
         </section>
 
@@ -53,9 +40,9 @@ export default function NewCliente() {
                   <div className="input">
                     <Input
                       className="formInput"
-                      name="cust"
-                      label="Preço de custo"
-                      placeholder="digite o preço de custo"
+                      name="phone"
+                      label="Telefone"
+                      placeholder="digite o telefone"
                     />
                   </div>
 
@@ -63,7 +50,7 @@ export default function NewCliente() {
                     <Input
                       className="formInput"
                       name="sale"
-                      label="Preço de venda"
+                      label="Telefone"
                       placeholder="digite o preço de venda"
                     />
                   </div>
@@ -73,47 +60,17 @@ export default function NewCliente() {
                   <div className="input">
                     <Input
                       className="formInput"
-                      name="name"
-                      label="Qte. Estoque"
-                      placeholder="digite a quantidade"
+                      name="celphone"
+                      label="Telefone celular"
+                      placeholder="digite o celular"
                     />
                   </div>
-                  <div className="input">
-                    <Select
-                      className="formSelect"
-                      name="console"
-                      label="Console"
-                      placeholder="..."
-                      options={options}
-                    />
-                  </div>
-                </div>
-                <div className="inputRow">
                   <div className="input">
                     <Input
                       className="formInput"
-                      name="sale"
-                      label="Peso"
-                      placeholder="digite o peso"
-                    />
-                  </div>
-
-                  <div className="input">
-                    <Select
-                      className="formSelect"
-                      name="lauch"
-                      label="Lançamento"
-                      placeholder="..."
-                      options={options2}
-                    />
-                  </div>
-                  <div className="inputDate">
-                    <p> Data do Lançamento</p>
-                    <DatePicker
-                      showPopperArrow={false}
-                      className="formInput"
-                      name="date"
-                      placeholder="Data do Lançamento"
+                      name="emalil"
+                      label="Email"
+                      placeholder="digite o email"
                     />
                   </div>
                 </div>
@@ -125,7 +82,7 @@ export default function NewCliente() {
                   <button className="green" type="submit">
                     Salvar
                   </button>
-                  <Link to="/produto">
+                  <Link to="/produtos">
                     <button
                       className="red"
                       type="button"

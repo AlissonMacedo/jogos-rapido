@@ -12,145 +12,153 @@ export const Container = styled.div`
     background: #fff;
   }
 
-  .titleOptions {
+  .table {
     width: 100%;
     max-width: 1200px;
+    height: 40px;
+    margin: 30px 0 15px;
+
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-    margin: 30px 0;
+    align-items: center;
 
-    h3 {
-      font-size: 30px;
-      color: #555;
-    }
-  }
-
-  .divOptionsRight {
-    display: flex;
-    flex-direction: row;
-
-    button {
-      margin-right: 20px;
-      height: 45px;
-      background: #fff;
-      border: solid 1px #555;
-
-      :hover {
-        background-color: #ddd;
-        border: solid 1px #000;
-      }
-      span {
-        color: #555;
-      }
+    p {
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 2rem;
+      color: #666;
+      text-transform: uppercase;
     }
 
-    input {
-      border-radius: 4px;
-      border: solid 0.5px #ccc;
-      padding: 0px 10px;
+    .divRight {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-      :focus {
-        border: solid 1px #555;
+      .buttonNewClient {
+        margin-right: 20px;
+        height: 40px;
+        background: #fff;
+        border: solid 0.5px #ccc;
+
+        :hover {
+          background-color: #ddd;
+          border: solid 1px #000;
+        }
+        span {
+          color: #555;
+        }
       }
-    }
-  }
 
-  .body {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0px 20px;
+      input {
+        height: 40px;
 
-    div {
-      min-height: 200px;
+        border-radius: 4px;
+        border: solid 0.5px #ccc;
+        padding: 10px 10px;
+
+        :focus {
+          border: solid 1px #555;
+        }
+        &::placeholder {
+          color: rgba(153, 153, 153, 0.7);
+        }
+      }
     }
   }
 `;
 
-export const ProjectTable = styled.table`
+export const ProductTable = styled.table`
   width: 100%;
   max-width: 1200px;
   border-radius: 4px;
   background-color: #fff;
-  padding: 30px;
+  padding: 15px;
   margin: auto;
-
-  border-radius: 4px;
-  border: solid 0.5px #ccc;
 
   thead {
     font-family: Roboto;
+    font-size: 1.5rem;
     color: #666;
     text-align: left;
 
     th {
-      height: 40px;
-    }
-    th#acoes {
+      height: 20px;
       text-align: center;
     }
   }
 
   tbody {
     td {
-      padding-top: 20px;
-
-      font-size: 16px;
+      height: 20px;
+      padding-top: 0px;
+      font-size: 1.2rem;
       color: #888;
-
       border-top: solid 0.5px;
       border-color: #ddd;
-      padding-bottom: 20px;
-    }
+      padding: 10px 0px;
 
+      text-align: center;
+      width: 100px;
+      font-size: 1.4rem;
+    }
     td#codigo {
+      text-align: center;
       width: 80px;
     }
-    td#title {
+    td#produto {
       text-align: left;
       width: 550px;
     }
     td#custo {
-      text-align: left;
+      text-align: center;
       width: 100px;
     }
     td#venda {
-      text-align: left;
+      text-align: center;
       width: 100px;
     }
     td#estoque {
-      text-align: left;
+      text-align: center;
       width: 100px;
     }
     td#console {
-      text-align: left;
+      text-align: center;
       width: 100px;
     }
-    td#acaoBT {
-      width: 140px;
-      display: flex;
-      flex-direction: row;
 
-      justify-content: space-around;
+    td#acao {
+      width: 80px;
 
-      button#buttonEditar {
-        background: none;
-        border: 0;
-        color: #4d85ee;
-        text-transform: uppercase;
-      }
-      button#buttonApagar {
-        background: none;
-        border: 0;
-        color: #de3b3b;
-        text-transform: uppercase;
-      }
+      div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
-      button {
-        padding-left: 10px;
-        font-size: 15px;
+        button {
+          border-radius: 0px;
+          padding: 5px;
+          background-color: #f1f1f1;
+
+          svg {
+            color: #666;
+          }
+          span {
+            color: #666;
+          }
+        }
+        button.buttonLeft {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        button.buttonRight {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          font-size: 16px;
+        }
       }
     }
   }

@@ -21,8 +21,8 @@ export default function Routes() {
       <Route path="/" exact component={SignIn} />
 
       <Route path="/dashboard" component={Dashboard} />
-      <Route path="/produtos" component={Product} />
-      <Route path="/novo-produto" component={NewProduct} />
+      <Route path="/produtos" exact component={Product} />
+      <Route path="/produtos/novo-produto" component={NewProduct} />
 
       <Route path="/pedidos" exact component={Request} />
       <Route path="/pedidos/imprimir" component={PrintResquest} />

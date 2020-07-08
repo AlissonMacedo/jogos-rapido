@@ -120,7 +120,7 @@ export const SalesTable = styled.table`
       width: 100px;
 
       div {
-        width: 100px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
